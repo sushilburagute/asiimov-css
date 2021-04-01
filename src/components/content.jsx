@@ -1,4 +1,7 @@
-export const Content = () => {
+import { useState } from "react";
+
+export const Content = ({ title, description, component }) => {
+  const [codeToggle, setCodeToggle] = useState(false);
   return (
     <div className="content">
       <h1>Installation</h1>
@@ -16,14 +19,27 @@ export const Content = () => {
       <div className="snippet">
         <div className="snippet-heading">
           <h3>Component Name</h3>
-          <button className="button-toggle">Show Code</button>
+          <button
+            className="button-toggle"
+            onClick={() => {
+              setCodeToggle(!codeToggle);
+            }}
+          >
+            {codeToggle ? "View Component" : "View Code"}
+          </button>
         </div>
         <div className="snippet-code">
-          <iframe
-            title="code"
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=nord&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false"
-            sandbox="allow-scripts allow-same-origin"
-          ></iframe>
+          {codeToggle ? (
+            <code>
+              {`<img class="avatar avatar-small" src="https://via.placeholder.com/150" alt="" />`}
+            </code>
+          ) : (
+            <img
+              class="avatar avatar-small"
+              src="https://via.placeholder.com/150"
+              alt=""
+            />
+          )}
         </div>
       </div>
     </div>

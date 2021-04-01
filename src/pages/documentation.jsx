@@ -1,16 +1,18 @@
-import "../styles/Documentation.module.css";
 import { Content } from "./../components/content";
 import { Sidenav } from "./../components/sidenav";
 import { HeaderDocs } from "./../components/header-docs";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export const Documentation = () => {
   return (
     <>
-      <HeaderDocs />
-      <div className="body">
-        <Sidenav />
-        <Content />
-      </div>
+      <Router>
+        <HeaderDocs />
+        <div className="body">
+          <Sidenav />
+          <Content />
+        </div>
+      </Router>
     </>
   );
 };
