@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../components/header-home";
 import { Canvas } from "react-three-fiber";
 import { softShadows, OrbitControls } from "@react-three/drei";
 // import { useSpring } from "react-spring";
