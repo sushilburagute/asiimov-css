@@ -8,15 +8,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/documentation">
-          <Documentation />
-        </Route>
+        <Route exact path="/" component={Home} />
+
+        <Route path="/about" component={About} />
+        <Route path="/documentation" component={Documentation} />
       </Switch>
     </Router>
   );

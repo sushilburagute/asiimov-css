@@ -85,7 +85,7 @@ a {
   display: flex;
   flex-direction: column;
   position: sticky;
-  height: 100vh;
+  height: 90vh;
   background-color: white;
   padding: 1em 2em 0em 2em;
   margin-bottom: 2em;

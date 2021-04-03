@@ -38,28 +38,26 @@ const sidebarItems = [
 
 export const Sidenav = () => {
   return (
-    <Router>
-      <div className="sidenav">
-        <h3 className="sidenav-heading">Getting Started</h3>
-        <ul className="list">
-          <li className="sidenav-stacked-list-selected">
-            <Link to="/documentation/installation">Installation</Link>
+    <div className="sidenav">
+      <h3 className="sidenav-heading">Getting Started</h3>
+      <ul className="list">
+        <li className="sidenav-stacked-list-selected">
+          <Link to="/documentation/installation">Installation</Link>
+        </li>
+        <li className="sidenav-stacked-list">
+          <Link to="/documentation/whats-new">What's new</Link>
+        </li>
+      </ul>
+      <h3 className="sidenav-heading">Components</h3>
+      <ul className="list">
+        {sidebarItems.map((items, key) => (
+          <li className="sidenav-stacked-list" key={items.name}>
+            {items.name}
           </li>
-          <li className="sidenav-stacked-list">
-            <Link to="/documentation/whats-new">What's new</Link>
-          </li>
-        </ul>
-        <h3 className="sidenav-heading">Components</h3>
-        <ul className="list">
-          {sidebarItems.map((items, key) => (
-            <li className="sidenav-stacked-list" key={items.name}>
-              {items.name}
-            </li>
-          ))}
-        </ul>
-        <h3 className="sidenav-heading">🚀 Made by Sushil Buragute</h3>
-        <h5 className="sidenav-heading">Got some feedback? Tweet me!</h5>
-      </div>
-    </Router>
+        ))}
+      </ul>
+      <h3 className="sidenav-heading">🚀 Made by Sushil Buragute</h3>
+      <h5 className="sidenav-heading">Got some feedback? Tweet me!</h5>
+    </div>
   );
 };

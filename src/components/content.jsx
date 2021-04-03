@@ -42,6 +42,7 @@ export const Content = ({ title, description, component }) => {
           )}
         </div>
       </div>
+      
     </div>
   );
 };

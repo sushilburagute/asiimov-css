@@ -1,4 +1,4 @@
-import { Content } from "./../components/content";
+import { Content } from "../components/Content";
 import { Sidenav } from "./../components/sidenav";
 import { HeaderDocs } from "./../components/header-docs";
 import {
@@ -58,16 +58,13 @@ export const Documentation = () => {
                 />
               ))}
             </> */}
-
-            <Route path="/documentation/installation">
-              <Installation />
-            </Route>
-            <Route path="/documentation/whats-new">
-              <WhatsNew />
-            </Route>
-            <Route exact path="/documentation">
-              <DocHome />
-            </Route>
+            <Route exact path="/documentation" component={DocHome} />
+            <Route
+              path="/documentation/installation"
+              component={Installation}
+              exact
+            />
+            <Route path="/documentation/whats-new" component={WhatsNew} />
           </Switch>
         </div>
       </div>
