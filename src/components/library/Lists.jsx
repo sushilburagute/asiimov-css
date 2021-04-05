@@ -3,22 +3,14 @@ import { useState } from "react";
 export const Lists = () => {
   const [codeToggle, setCodeToggle] = useState(false);
   return (
-    <div className="content">
+    <div>
       <h1>Lists</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+      <p className="subheading">
+        List flexible for displaying series of content.
       </p>
       <div className="snippet">
         <div className="snippet-heading">
-          <h3>Component Name</h3>
+          <h3>Spaced Lists</h3>
           <button
             className="button-toggle"
             onClick={() => {
@@ -31,14 +23,48 @@ export const Lists = () => {
         <div className="snippet-code">
           {codeToggle ? (
             <code>
-              {`<img class="avatar avatar-small" src="https://via.placeholder.com/150" alt="" />`}
+              {`<ul>`} <br />
+              {`<li class="spaced-list">List Item 1</li>`} <br />
+              {`<li class="spaced-list">List Item 1</li>`} <br />
+              {`<li class="spaced-list">List Item 1</li>`} <br />
+              {`</ul>`} <br />
             </code>
           ) : (
-            <img
-              class="avatar avatar-small"
-              src="https://via.placeholder.com/150"
-              alt=""
-            />
+            <ul>
+              <li class="spaced-list">List Item 1</li>
+              <li class="spaced-list">List Item 2</li>
+              <li class="spaced-list">List Item 3</li>
+            </ul>
+          )}
+        </div>
+      </div>
+      <div className="snippet">
+        <div className="snippet-heading">
+          <h3>Stacked Lists</h3>
+          <button
+            className="button-toggle"
+            onClick={() => {
+              setCodeToggle(!codeToggle);
+            }}
+          >
+            {codeToggle ? "View Component" : "View Code"}
+          </button>
+        </div>
+        <div className="snippet-code">
+          {codeToggle ? (
+            <code>
+              {`<ul>`} <br />
+              {`<li class="stacked-list">List Item 1</li>`} <br />
+              {`<li class="stacked-list">List Item 1</li>`} <br />
+              {`<li class="stacked-list">List Item 1</li>`} <br />
+              {`</ul>`} <br />
+            </code>
+          ) : (
+            <ul>
+              <li class="stacked-list">List Item 1</li>
+              <li class="stacked-list">List Item 2</li>
+              <li class="stacked-list">List Item 3</li>
+            </ul>
           )}
         </div>
       </div>

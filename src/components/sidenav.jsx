@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const sidebarItems = [
   {
@@ -32,7 +32,7 @@ const sidebarItems = [
     name: "Typograhy",
   },
   {
-    name: "ToastNotifcations",
+    name: "Toasts",
   },
 ];
 
@@ -75,7 +75,11 @@ export const Sidenav = () => {
           </li>
         ))}
       </ul>
-      <h3 className="sidenav-heading">🚀 Made by Sushil Buragute</h3>
+      <h3 className="sidenav-heading">
+        <a href="https://sushilburagute.github.io/">
+          🚀 Made by Sushil Buragute
+        </a>
+      </h3>
       <h5 className="sidenav-heading">Got some feedback? Tweet me!</h5>
     </div>
   );

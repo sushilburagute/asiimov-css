@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Sidenav } from "./../components/sidenav";
 import { HeaderDocs } from "./../components/header-docs";
-import { Alerts } from "./../components/library/Alerts";
 import {
+  Alerts,
   Avatars,
   Badges,
   Buttons,
@@ -12,15 +12,12 @@ import {
   Lists,
   Modal,
   Typograhy,
-  ToastNotifcations,
+  Toasts,
+  WhatsNew,
 } from "../components/library/index";
 
 const DocHome = () => {
   return <h1>Home of docs in Content</h1>;
-};
-
-const WhatsNew = () => {
-  return <h1>Home of WhatsNew in Content</h1>;
 };
 
 export const Documentation = () => {
@@ -29,20 +26,8 @@ export const Documentation = () => {
       <HeaderDocs />
       <div className="body">
         <Sidenav />
-        {/* <Content /> */}
         <div className="content">
           <Switch>
-            {/* <>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  children={<route.content />}
-                />
-              ))}
-            </> */}
-
             <Route exact path="/documentation/whats-new" component={WhatsNew} />
             <Route exact path="/documentation/Avatars" component={Avatars} />
             <Route exact path="/documentation/Alert" component={Alerts} />
@@ -53,11 +38,7 @@ export const Documentation = () => {
             <Route exact path="/documentation/Input" component={Input} />
             <Route exact path="/documentation/Lists" component={Lists} />
             <Route exact path="/documentation/Modal" component={Modal} />
-            <Route
-              exact
-              path="/documentation/ToastNotifications"
-              component={ToastNotifcations}
-            />
+            <Route exact path="/documentation/Toasts" component={Toasts} />
             <Route
               exact
               path="/documentation/Typograhy"

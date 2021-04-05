@@ -3,22 +3,15 @@ import { useState } from "react";
 export const Alerts = () => {
   const [codeToggle, setCodeToggle] = useState(false);
   return (
-    <div className="content">
-      <h1>Alert</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+    <div>
+      <h1>Alerts</h1>
+      <p className="subheading">
+        Provide contextual feedback messages for typical user actions with the
+        handful of available and flexible alert messages.
       </p>
       <div className="snippet">
         <div className="snippet-heading">
-          <h3>Component Name</h3>
+          <h3>Alerts</h3>
           <button
             className="button-toggle"
             onClick={() => {
@@ -31,14 +24,24 @@ export const Alerts = () => {
         <div className="snippet-code">
           {codeToggle ? (
             <code>
-              {`<img class="avatar avatar-small" src="https://via.placeholder.com/150" alt="" />`}
+              {`<div class="alert alert-success">Success Alert!</div>`} <br />
+              {`<div class="alert alert-error">Error Alert!</div>`}
+              <br />
+              {`<div class="alert alert-warning">Warning Alert!</div>`}
+              <br />
+              {`<div class="alert alert-primary">Primary Alert!</div>`}
+              <br />
+              {`<div class="alert alert-secondary">Secondary Alert!</div>`}
+              <br />
             </code>
           ) : (
-            <img
-              class="avatar avatar-small"
-              src="https://via.placeholder.com/150"
-              alt=""
-            />
+            <>
+              <div class="alert alert-success">Success Alert!</div>
+              <div class="alert alert-error">Error Alert!</div>
+              <div class="alert alert-warning">Warning Alert!</div>
+              <div class="alert alert-primary">Primary Alert!</div>
+              <div class="alert alert-secondary">Secondary Alert!</div>
+            </>
           )}
         </div>
       </div>

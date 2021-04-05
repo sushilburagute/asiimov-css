@@ -3,18 +3,10 @@ import { useState } from "react";
 export const Typograhy = () => {
   const [codeToggle, setCodeToggle] = useState(false);
   return (
-    <div className="content">
+    <div>
       <h1>Typograhy</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+      <p className="subheading">
+        Text utilities are used for text alignment, styles and overflow things.
       </p>
       <div className="snippet">
         <div className="snippet-heading">
@@ -31,14 +23,18 @@ export const Typograhy = () => {
         <div className="snippet-code">
           {codeToggle ? (
             <code>
-              {`<img class="avatar avatar-small" src="https://via.placeholder.com/150" alt="" />`}
+              {`<h1 class="text heading">Heading</h1>`} <br />
+              {`<h3 class="text subheading">Subheading</h3>`} <br />
+              {`<h6 class="text text text samll-text">Small text</h6>`} <br />
+              {`<p class="text text text grey-text">Grey Text</p>`} <br />
             </code>
           ) : (
-            <img
-              class="avatar avatar-small"
-              src="https://via.placeholder.com/150"
-              alt=""
-            />
+            <>
+              <h1 class="text heading">Heading</h1>
+              <h3 class="text subheading">Subheading</h3>
+              <h6 class="text text text samll-text">Small text</h6>
+              <p class="text text text grey-text">Grey Text</p>
+            </>
           )}
         </div>
       </div>
