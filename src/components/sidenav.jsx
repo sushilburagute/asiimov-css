@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const sidebarItems = [
   {
@@ -32,7 +32,7 @@ const sidebarItems = [
     name: "Typograhy",
   },
   {
-    name: "Toast Notifcations",
+    name: "ToastNotifcations",
   },
 ];
 
@@ -41,18 +41,37 @@ export const Sidenav = () => {
     <div className="sidenav">
       <h3 className="sidenav-heading">Getting Started</h3>
       <ul className="list">
-        <li className="sidenav-stacked-list-selected">
-          <Link to="/documentation/installation">Installation</Link>
+        <li className="sidenav-stacked-list">
+          <NavLink
+            exact
+            to="/documentation"
+            activeClassName="sidenav-navlink-selected"
+            className="sidenav-navlink"
+          >
+            Documentation
+          </NavLink>
         </li>
         <li className="sidenav-stacked-list">
-          <Link to="/documentation/whats-new">What's new</Link>
+          <NavLink
+            to="/documentation/whats-new"
+            activeClassName="sidenav-navlink-selected"
+            className="sidenav-navlink"
+          >
+            What's new
+          </NavLink>
         </li>
       </ul>
       <h3 className="sidenav-heading">Components</h3>
       <ul className="list">
-        {sidebarItems.map((items, key) => (
-          <li className="sidenav-stacked-list" key={items.name}>
-            {items.name}
+        {sidebarItems.map(({ name }) => (
+          <li className="sidenav-stacked-list" key={name}>
+            <NavLink
+              to={`/documentation/${name}`}
+              activeClassName="sidenav-navlink-selected"
+              className="sidenav-navlink"
+            >
+              {name}
+            </NavLink>
           </li>
         ))}
       </ul>

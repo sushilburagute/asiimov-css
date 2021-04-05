@@ -102,6 +102,32 @@ a {
 .sidenav-stacked-list {
   text-align: left;
   list-style: none;
+  margin: 2em 0;
+  /* padding: 0.5em 1.5em;
+  margin: 0.7em 0;
+  font-weight: 300;
+  align-items: center;
+  background-color: white; */
+}
+
+/* .sidenav-stacked-list:hover {
+  background-color: #1bc2e017;
+} */
+
+.sidenav-stacked-list-selected {
+  text-align: left;
+  align-items: center;
+  list-style: none;
+  margin: 0.7em 0;
+  /* padding: 0.5em 1.5em;
+  margin: 0.7em 0;
+  font-weight: 600;
+  color: #11a6c0;
+  background-color: #1bc2e017;
+  border-radius: 0.5em; */
+}
+
+.sidenav-navlink {
   padding: 0.5em 1.5em;
   margin: 0.7em 0;
   font-weight: 300;
@@ -109,14 +135,11 @@ a {
   background-color: white;
 }
 
-.sidenav-stacked-list:hover {
+.sidenav-navlink:hover {
   background-color: #1bc2e017;
 }
 
-.sidenav-stacked-list-selected {
-  text-align: left;
-  align-items: center;
-  list-style: none;
+.sidenav-navlink-selected {
   padding: 0.5em 1.5em;
   margin: 0.7em 0;
   font-weight: 600;

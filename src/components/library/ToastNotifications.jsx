@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export const Content = () => {
+export const ToastNotifcations = () => {
   const [codeToggle, setCodeToggle] = useState(false);
   return (
     <div className="content">
-      <h1>Installation</h1>
+      <h1>Toast</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
