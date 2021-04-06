@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Sidenav } from "./../components/sidenav";
 import { HeaderDocs } from "./../components/header-docs";
+import { useState } from "react";
 import {
   Alerts,
   Avatars,
@@ -21,9 +22,16 @@ const DocHome = () => {
 };
 
 export const Documentation = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const updateState = () => {
+    setShowSidebar(!showSidebar);
+    console.log(showSidebar);
+  };
+
   return (
     <Router>
-      <HeaderDocs />
+      <HeaderDocs updateState={updateState} />
       <div className="body">
         <Sidenav />
         <div className="content">

@@ -79,6 +79,18 @@ a {
   letter-spacing: 0.04rem;
 }
 
+.header-icon {
+  width: 2em;
+  height: 2em;
+  margin-right: 1.5em;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* SIDENAV */
 
 .sidenav {
@@ -146,6 +158,29 @@ a {
   color: #11a6c0;
   background-color: #1bc2e017;
   border-radius: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .header-icon {
+    width: 10em;
+    margin-right: 0em;
+  }
+  .logo {
+    font-size: 18px;
+  }
+
+  .body {
+    display: flex;
+    margin: 2em;
+    width: 100%;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    height: auto;
+  }
+  .sidenav {
+    display: none;
+  }
 }
 
 /* CONTENT DOCS */

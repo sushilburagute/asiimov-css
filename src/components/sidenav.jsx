@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const sidebarItems = [
   {
@@ -38,7 +38,7 @@ const sidebarItems = [
 
 export const Sidenav = () => {
   return (
-    <div className="sidenav">
+    <div className="sidenav mobile-hidden">
       <h3 className="sidenav-heading">Getting Started</h3>
       <ul className="list">
         <li className="sidenav-stacked-list">
