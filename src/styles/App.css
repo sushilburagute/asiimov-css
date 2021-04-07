@@ -106,7 +106,7 @@ a {
   overflow-y: scroll;
   scroll-behavior: auto;
   /* position: absolute; */
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .list {
@@ -163,12 +163,17 @@ a {
 }
 
 @media (max-width: 768px) {
-  .header-icon {
-    width: 10em;
-    margin-right: 0em;
+  .subtitle {
+    font-size: 10px;
+    padding: 1.2em 0em;
   }
   .logo {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .header-icon {
+    width: 1.4em;
+    height: auto;
   }
 
   .body {
@@ -183,6 +188,10 @@ a {
     position: absolute;
     z-index: 10;
     width: 100vw;
+  }
+
+  .content {
+    /* z-index: 10; */
   }
 }
 
