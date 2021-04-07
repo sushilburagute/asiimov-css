@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const Image = () => {
   const [codeToggle, setCodeToggle] = useState(false);
+  const [codeToggle2, setCodeToggle2] = useState(false);
   return (
     <div>
       <h1>Image</h1>
@@ -40,14 +41,14 @@ export const Image = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setCodeToggle2(!codeToggle2);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {codeToggle2 ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {codeToggle2 ? (
             <code>
               {`<img class="responsive-image rounded-image" src="https://via.placeholder.com/150" alt="" />`}
             </code>

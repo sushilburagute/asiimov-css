@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export const Input = () => {
   const [codeToggle, setCodeToggle] = useState(false);
+  const [codeToggle2, setCodeToggle2] = useState(false);
+  const [codeToggle3, setCodeToggle3] = useState(false);
   return (
     <div>
       <h1>Input</h1>
@@ -34,14 +36,14 @@ export const Input = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setCodeToggle2(!codeToggle2);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {codeToggle2 ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {codeToggle2 ? (
             <code>{`<input type="text" class="textbox textbox-warning" />`}</code>
           ) : (
             <input type="text" class="textbox textbox-warning" />
@@ -54,14 +56,14 @@ export const Input = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setCodeToggle3(!codeToggle3);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {codeToggle3 ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {codeToggle3 ? (
             <code>{`<input type="text" class="textbox textbox-disabled" />`}</code>
           ) : (
             <input type="text" class="textbox textbox-disabled" />

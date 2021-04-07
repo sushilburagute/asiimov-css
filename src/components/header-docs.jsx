@@ -1,4 +1,4 @@
-export const HeaderDocs = ({ updateState }) => {
+export const HeaderDocs = ({ updateState, pageInfo }) => {
   return (
     <header className="documentation-header">
       <div className="title">
@@ -19,7 +19,7 @@ export const HeaderDocs = ({ updateState }) => {
             />
           </svg>
           <span>
-            <h1 className="logo">Asiimov UI / Docs </h1>
+            <h1 className="logo">Asiimov UI / {pageInfo} </h1>
           </span>
         </div>
       </div>

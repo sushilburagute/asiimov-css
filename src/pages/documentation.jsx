@@ -28,7 +28,7 @@ export const Documentation = () => {
 
   return (
     <Router>
-      <HeaderDocs updateState={updateState} />
+      <HeaderDocs updateState={updateState} pageInfo={"Docs"} />
       <div
         className="body"
         style={

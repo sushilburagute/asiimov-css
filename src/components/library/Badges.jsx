@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const Badges = () => {
   const [codeToggle, setCodeToggle] = useState(false);
+  const [codeToggle2, setCodeToggle2] = useState(false);
   return (
     <div>
       <h1>Badges</h1>
@@ -41,14 +42,14 @@ export const Badges = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setCodeToggle2(!codeToggle2);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {codeToggle2 ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {codeToggle2 ? (
             <code>
               {`<div class="badge-pill button badge-pill-primary">Primary Pill</div>`}
               <br />

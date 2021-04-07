@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CodeSnippet from "./../CodeSnippet";
 
 export const Alerts = () => {
   const [codeToggle, setCodeToggle] = useState(false);
