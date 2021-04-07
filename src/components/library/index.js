@@ -10,3 +10,4 @@ export { Lists } from "./Lists";
 export { Modal } from "./Modal";
 export { Toasts } from "./Toasts";
 export { Typograhy } from "./Typography";
+export { DocumentationHome } from "./DocumentationHome";

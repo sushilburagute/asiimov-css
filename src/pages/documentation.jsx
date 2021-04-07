@@ -15,11 +15,8 @@ import {
   Typograhy,
   Toasts,
   WhatsNew,
+  DocumentationHome,
 } from "../components/library/index";
-
-const DocHome = () => {
-  return <h1>Home of docs in Content</h1>;
-};
 
 export const Documentation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -62,7 +59,7 @@ export const Documentation = () => {
               path="/documentation/Typograhy"
               component={Typograhy}
             />
-            <Route exact path="/documentation" component={DocHome} />
+            <Route exact path="/documentation" component={DocumentationHome} />
           </Switch>
         </div>
       </div>

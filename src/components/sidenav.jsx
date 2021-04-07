@@ -90,7 +90,7 @@ export const Sidenav = ({ showSidenav }) => {
         ))}
       </ul>
       <h3 className="sidenav-heading">
-        <a href="https://sushilburagute.github.io/">
+        <a href="https://sushilburagute.github.io/" className="footer-link">
           🚀 Made by Sushil Buragute
         </a>
       </h3>

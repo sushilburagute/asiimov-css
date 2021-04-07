@@ -27,7 +27,7 @@ export const Image = () => {
             </code>
           ) : (
             <img
-              src="https://via.placeholder.com/200"
+              src="https://images.unsplash.com/photo-1615069433711-41e14f250182?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80"
               class="responsive-image"
               alt=""
             />
@@ -53,7 +53,7 @@ export const Image = () => {
             </code>
           ) : (
             <img
-              src="https://via.placeholder.com/200"
+              src="https://images.unsplash.com/photo-1518415692216-ce36b914890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               class="responsive-image rounded-image"
               alt=""
             />

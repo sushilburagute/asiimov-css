@@ -219,7 +219,7 @@ body {
 
 .responsive-image {
   width: 100%;
-  max-width: 200px;
+  /* max-width: 200px; */
   height: auto;
 }
 
@@ -255,7 +255,7 @@ body {
   margin: 1em;
   height: auto;
   overflow: hidden;
-  width: calc(100% / 4);
+  width: 20em;
 }
 
 .card .heading {

@@ -51,8 +51,12 @@ a {
 }
 
 .link {
-  text-decoration: none;
+  text-decoration: underline;
   color: #111;
+}
+
+.footer-link {
+  text-decoration: underline;
 }
 
 .body {
@@ -188,10 +192,6 @@ a {
     position: absolute;
     z-index: 10;
     width: 100vw;
-  }
-
-  .content {
-    /* z-index: 10; */
   }
 }
 
