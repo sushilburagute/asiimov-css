@@ -36,9 +36,23 @@ const sidebarItems = [
   },
 ];
 
-export const Sidenav = () => {
+export const Sidenav = ({ showSidenav }) => {
   return (
-    <div className="sidenav mobile-hidden">
+    <div
+      className="sidenav"
+      style={
+        showSidenav
+          ? {
+              display: "none",
+              position: "absolute",
+              zIndex: "3",
+              transition: "0.4s",
+              width: "100vw",
+              height: "100vh",
+            }
+          : { display: "flex" }
+      }
+    >
       <h3 className="sidenav-heading">Getting Started</h3>
       <ul className="list">
         <li className="sidenav-stacked-list">

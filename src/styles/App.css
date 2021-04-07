@@ -105,6 +105,8 @@ a {
   box-shadow: 10px 10px 55px -8px rgba(0, 0, 0, 0.31);
   overflow-y: scroll;
   scroll-behavior: auto;
+  /* position: absolute; */
+  z-index: 10;
 }
 
 .list {
@@ -171,7 +173,6 @@ a {
 
   .body {
     display: flex;
-    margin: 2em;
     width: 100%;
     left: 0;
     right: 0;
@@ -179,7 +180,9 @@ a {
     height: auto;
   }
   .sidenav {
-    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
   }
 }
 

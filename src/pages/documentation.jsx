@@ -32,9 +32,19 @@ export const Documentation = () => {
   return (
     <Router>
       <HeaderDocs updateState={updateState} />
-      <div className="body">
-        <Sidenav />
-        <div className="content">
+      <div
+        className="body"
+        style={
+          showSidebar
+            ? { display: "flex", position: "relative" }
+            : { display: "grid", width: "100vw", height: "100vh" }
+        }
+      >
+        <Sidenav showSidenav={showSidebar} />
+        <div
+          className="content"
+          style={showSidebar ? { width: "100vw", height: "90vh" } : {}}
+        >
           <Switch>
             <Route exact path="/documentation/whats-new" component={WhatsNew} />
             <Route exact path="/documentation/Avatars" component={Avatars} />
