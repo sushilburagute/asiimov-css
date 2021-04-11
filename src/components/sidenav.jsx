@@ -36,22 +36,22 @@ const sidebarItems = [
   },
 ];
 
+const sidenavActive = {
+  display: "none",
+  position: "absolute",
+  zIndex: "3",
+  transition: "0.4s",
+  width: "100vw",
+  height: "100vh",
+};
+
+const sidenavInactive = { display: "flex" };
+
 export const Sidenav = ({ showSidenav }) => {
   return (
     <div
       className="sidenav"
-      style={
-        showSidenav
-          ? {
-              display: "none",
-              position: "absolute",
-              zIndex: "3",
-              transition: "0.4s",
-              width: "100vw",
-              height: "100vh",
-            }
-          : { display: "flex" }
-      }
+      style={showSidenav ? sidenavActive : sidenavInactive}
     >
       <h3 className="sidenav-heading">Getting Started</h3>
       <ul className="list">

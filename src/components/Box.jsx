@@ -3,6 +3,12 @@ import { MeshWobbleMaterial } from "@react-three/drei";
 // import { useSpring } from "react-spring";
 import React, { useRef, useState, useEffect } from "react";
 
+const MeshColors = {
+  red: "#DD0031",
+  blue: "#1bc4e0",
+  green: "#41B883",
+};
+
 export function Box({ position, args, color, speed, changeHero }) {
   const mesh = useRef();
   const [expand, setExpand] = useState(false);
@@ -26,11 +32,11 @@ export function Box({ position, args, color, speed, changeHero }) {
       scale={expand ? [1.5, 1.5, 1.5] : [1, 1, 1]}
       onClick={() => {
         setExpand(!expand);
-        if (color === "#DD0031") {
+        if (color === MeshColors.red) {
           changeHero("about");
-        } else if (color === "#1bc4e0") {
+        } else if (color === MeshColors.blue) {
           changeHero("documentation");
-        } else if (color === "#41B883") {
+        } else if (color === MeshColors.green) {
           changeHero("github");
         } else {
           changeHero("default");

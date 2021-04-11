@@ -1,10 +1,8 @@
-import Header from "../components/header-home";
 import { Canvas } from "react-three-fiber";
 import { softShadows, OrbitControls } from "@react-three/drei";
-// import { useSpring } from "react-spring";
 import React, { useState } from "react";
-import { Box } from "../components/Box";
-import { HeroText } from "../components/herotext";
+
+import { HeroText, Header, Box } from "../components/index";
 
 softShadows();
 

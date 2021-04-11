@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeaderDocs } from "./../components/header-docs";
+import { HeaderDocs } from "./../components/index";
 
 export const About = () => {
   return (

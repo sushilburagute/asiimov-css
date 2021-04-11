@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Sidenav } from "./../components/sidenav";
-import { HeaderDocs } from "./../components/header-docs";
+import { HeaderDocs, Sidenav } from "./../components/index";
 import { useState } from "react";
 import {
   Alerts,

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CodeSnippet = ({ title, componentCode }) => {
+export const CodeSnippet = ({ title, componentCode }) => {
   const [codeToggle, setCodeToggle] = useState(false);
   return (
     <div className="snippet">
@@ -21,5 +21,3 @@ const CodeSnippet = ({ title, componentCode }) => {
     </div>
   );
 };
-
-export default CodeSnippet;
