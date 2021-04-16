@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export const Badges = () => {
-  const [codeToggle, setCodeToggle] = useState(false);
-  const [codeToggle2, setCodeToggle2] = useState(false);
+  const [showProfileBadges, setShowProfileBadges] = useState(false);
+  const [showBadges, setShowBadges] = useState(false);
   return (
     <div>
       <h1>Badges</h1>
@@ -15,14 +15,14 @@ export const Badges = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setShowProfileBadges(!showProfileBadges);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {showProfileBadges ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {showProfileBadges ? (
             <code>
               {`<div class="badge-avatar"> <img src="https://via.placeholder.com/150" /> <div class="badge-green"></div> </div>`}
             </code>
@@ -42,14 +42,14 @@ export const Badges = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle2(!codeToggle2);
+              setShowBadges(!showBadges);
             }}
           >
-            {codeToggle2 ? "View Component" : "View Code"}
+            {showBadges ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle2 ? (
+          {showBadges ? (
             <code>
               {`<div class="badge-pill button badge-pill-primary">Primary Pill</div>`}
               <br />

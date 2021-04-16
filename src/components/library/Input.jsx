@@ -1,9 +1,33 @@
-import { useState } from "react";
+import { useReducer } from "react";
+
+const reducer = (state, action) => {
+  console.log(action.type);
+  switch (action.type) {
+    case "toggleTextbox":
+      return { ...state, toggleTextbox: !state.toggleTextbox };
+    case "toggleTextboxWarning":
+      return {
+        ...state,
+        toggleTextboxWarning: !state.toggleTextboxWarning,
+      };
+    case "toggleTextboxDisabled":
+      return {
+        ...state,
+        toggleTextboxDisabled: !state.toggleTextboxDisabled,
+      };
+    default:
+      throw new Error();
+  }
+};
+
+const initialState = {
+  toggleTextbox: false,
+  toggleTextboxWarning: false,
+  toggleTextboxDisabled: false,
+};
 
 export const Input = () => {
-  const [codeToggle, setCodeToggle] = useState(false);
-  const [codeToggle2, setCodeToggle2] = useState(false);
-  const [codeToggle3, setCodeToggle3] = useState(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
       <h1>Input</h1>
@@ -16,14 +40,14 @@ export const Input = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              dispatch({ type: "toggleTextbox" }, state);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {state.toggleTextbox ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {state.toggleTextbox ? (
             <code>{`<input type="text" class="textbox" />`}</code>
           ) : (
             <input type="text" class="textbox" />
@@ -36,14 +60,14 @@ export const Input = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle2(!codeToggle2);
+              dispatch({ type: "toggleTextboxWarning" }, state);
             }}
           >
-            {codeToggle2 ? "View Component" : "View Code"}
+            {state.toggleTextboxWarning ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle2 ? (
+          {state.toggleTextboxWarning ? (
             <code>{`<input type="text" class="textbox textbox-warning" />`}</code>
           ) : (
             <input type="text" class="textbox textbox-warning" />
@@ -56,14 +80,14 @@ export const Input = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle3(!codeToggle3);
+              dispatch({ type: "toggleTextboxDisabled" }, state);
             }}
           >
-            {codeToggle3 ? "View Component" : "View Code"}
+            {state.toggleTextboxDisabled ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle3 ? (
+          {state.toggleTextboxDisabled ? (
             <code>{`<input type="text" class="textbox textbox-disabled" />`}</code>
           ) : (
             <input type="text" class="textbox textbox-disabled" />

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export const Lists = () => {
-  const [codeToggle, setCodeToggle] = useState(false);
-  const [codeToggle2, setCodeToggle2] = useState(false);
+  const [showSpacedList, setShowSpacedList] = useState(false);
+  const [showStackedList, setShowStackedList] = useState(false);
   return (
     <div>
       <h1>Lists</h1>
@@ -15,14 +15,14 @@ export const Lists = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setShowSpacedList(!showSpacedList);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {showSpacedList ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {showSpacedList ? (
             <code>
               {`<ul>`} <br />
               {`<li class="spaced-list">List Item 1</li>`} <br />
@@ -45,14 +45,14 @@ export const Lists = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle2(!codeToggle2);
+              setShowStackedList(!showStackedList);
             }}
           >
-            {codeToggle2 ? "View Component" : "View Code"}
+            {showStackedList ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle2 ? (
+          {showStackedList ? (
             <code>
               {`<ul>`} <br />
               {`<li class="stacked-list">List Item 1</li>`} <br />

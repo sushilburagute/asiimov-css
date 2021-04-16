@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export const Image = () => {
-  const [codeToggle, setCodeToggle] = useState(false);
-  const [codeToggle2, setCodeToggle2] = useState(false);
+  const [showImageResponsive, setShowImageResponsive] = useState(false);
+  const [showImageRounded, setShowImageRounded] = useState(false);
   return (
     <div>
       <h1>Image</h1>
@@ -15,14 +15,14 @@ export const Image = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setShowImageResponsive(!showImageResponsive);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {showImageResponsive ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {showImageResponsive ? (
             <code>
               {`<img class="responsive-image" src="https://via.placeholder.com/150" alt="" />`}
             </code>
@@ -41,14 +41,14 @@ export const Image = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle2(!codeToggle2);
+              setShowImageRounded(!showImageRounded);
             }}
           >
-            {codeToggle2 ? "View Component" : "View Code"}
+            {showImageRounded ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle2 ? (
+          {showImageRounded ? (
             <code>
               {`<img class="responsive-image rounded-image" src="https://via.placeholder.com/150" alt="" />`}
             </code>

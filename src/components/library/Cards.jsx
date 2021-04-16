@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 export const Cards = () => {
-  const [codeToggle, setCodeToggle] = useState(false);
-  const [codeToggle2, setCodeToggle2] = useState(false);
+  const [showCardText, setShowCardText] = useState(false);
+  const [showCardImage, setShowCardImage] = useState(false);
+
   return (
     <div>
       <h1>Cards</h1>
@@ -13,14 +14,14 @@ export const Cards = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle(!codeToggle);
+              setShowCardText(!showCardText);
             }}
           >
-            {codeToggle ? "View Component" : "View Code"}
+            {showCardText ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle ? (
+          {showCardText ? (
             <code>
               {`<div class="card">`} <br />
               {`<h1 class="text heading">Card Heading</h1>`} <br />
@@ -50,14 +51,14 @@ export const Cards = () => {
           <button
             className="button-toggle"
             onClick={() => {
-              setCodeToggle2(!codeToggle2);
+              setShowCardImage(!showCardImage);
             }}
           >
-            {codeToggle2 ? "View Component" : "View Code"}
+            {showCardImage ? "View Component" : "View Code"}
           </button>
         </div>
         <div className="snippet-code">
-          {codeToggle2 ? (
+          {showCardImage ? (
             <code>
               {`<div class="card">`} <br />
               {`<div class="card-image-wrapper"></div>`} <br />

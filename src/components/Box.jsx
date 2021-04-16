@@ -1,6 +1,5 @@
 import { useFrame } from "react-three-fiber";
 import { MeshWobbleMaterial } from "@react-three/drei";
-// import { useSpring } from "react-spring";
 import React, { useRef, useState, useEffect } from "react";
 
 const MeshColors = {
@@ -21,11 +20,6 @@ export function Box({ position, args, color, speed, changeHero }) {
       expand === true ? setExpand(false) : setExpand(false);
     }, 6000);
   }, [expand]);
-
-  //   const props = useSpring({
-  //     scale: expand ? [1.5, 1.5, 1.5] : [1, 1, 1],
-  //   });
-  //   console.log(props.scale);
   return (
     <mesh
       ref={mesh}
