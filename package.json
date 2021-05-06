@@ -13,7 +13,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spring": "^9.0.0",
-    "react-three-fiber": "^5.3.21",
+    "react-three": "^0.9.7",
+    "react-three-fiber": "^5.3.22",
     "three": "^0.126.1",
     "web-vitals": "^1.0.1"
   },
